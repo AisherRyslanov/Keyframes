@@ -1,0 +1,82 @@
+.circle {
+    width: 330px;
+    height: 330px;
+    background: green;
+    clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+    animation: 2s circleKey linear infinite;
+}
+
+@keyframes circleKey {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.block {
+    border: solid 1px red;
+    width: 500px;
+    height: 500px;
+}
+
+.teg {
+    width: 50px;
+    height: 50px;
+    background: blueviolet;
+    border-radius: 50%;
+    animation: 5s lineKey linear infinite;
+}
+
+@keyframes lineKey {
+    0% {
+
+    }
+    25% {
+        margin-left: 450px;
+        margin-top: 0;
+    }
+    50% {
+        margin-left: 450px;
+        margin-top: 450px;
+    }
+    75% {
+        margin-top: 450px;
+        margin-left: 0;
+    }
+    100% {
+        margin-left: 0;
+        margin-top: 0;
+    }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.img{
+    font-size: 20px;
+    animation: 2s imgKey linear infinite;
+}
+@keyframes imgKey {
+    from{
+        transform: rotate3d(0,0,0,0turn);
+    }
+    to{
+        transform: rotate3d(1,1,1,1turn);
+    }
+}
+.btn{
+    background: red;
+    color: green;
+    font-size: 250px;
+    height: 450px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+}
+@keyframes btnKey {
+    0%{
+        transform: scale(1,1);
+    }
+}
